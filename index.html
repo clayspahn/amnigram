@@ -21,12 +21,16 @@
       font-size: 10pt;
       background-color: #f8f8f8;
       color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
       text-align: center;
       letter-spacing: 0.05em;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
     .container {
@@ -60,6 +64,32 @@
       font-size: 7pt;
       letter-spacing: 0.08em;
     }
+
+    .fixed-bottom {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .side-symbol {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12pt;
+      opacity: 0.6;
+      z-index: 10;
+    }
+
+    .left-symbol {
+      left: 10px;
+    }
+
+    .right-symbol {
+      right: 10px;
+    }
   </style>
 </head>
 <body>
@@ -76,10 +106,16 @@
     
     <p><a href="https://instagram.com/amnigram" target="_blank">@amnigram</a></p>
     <p><a href="https://amnigram.com" target="_blank">amnigram.com</a></p>
+  </div>
 
+  <!-- Bottom fixed text -->
+  <div class="fixed-bottom">
     <p class="dim amni-definition">[developmental stage]</p>
     <p class="dim amni-definition">2025</p>
-
   </div>
+
+  <!-- Side symbols -->
+  <div class="side-symbol left-symbol">&lt;≤</div>
+  <div class="side-symbol right-symbol">≥&gt;</div>
 </body>
 </html>
